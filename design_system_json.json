@@ -1,0 +1,368 @@
+{
+  "designSystem": {
+    "name": "CryptoCashback Landing Page Design System",
+    "version": "1.0",
+    "inspiration": "Clean, modern coupon finder apps with crypto twist",
+    
+    "colorPalette": {
+      "primary": {
+        "main": "#6366f1",
+        "light": "#818cf8", 
+        "dark": "#4f46e5",
+        "contrast": "#ffffff"
+      },
+      "secondary": {
+        "main": "#10b981",
+        "light": "#34d399",
+        "dark": "#059669",
+        "contrast": "#ffffff"
+      },
+      "accent": {
+        "crypto": "#f59e0b",
+        "success": "#22c55e",
+        "warning": "#ef4444"
+      },
+      "neutral": {
+        "50": "#f8fafc",
+        "100": "#f1f5f9", 
+        "200": "#e2e8f0",
+        "300": "#cbd5e1",
+        "400": "#94a3b8",
+        "500": "#64748b",
+        "600": "#475569",
+        "700": "#334155",
+        "800": "#1e293b",
+        "900": "#0f172a"
+      },
+      "background": {
+        "primary": "#ffffff",
+        "secondary": "#f8fafc",
+        "tertiary": "#f1f5f9"
+      }
+    },
+
+    "typography": {
+      "fontFamilies": {
+        "primary": "Inter, system-ui, sans-serif",
+        "heading": "Poppins, Inter, sans-serif",
+        "mono": "JetBrains Mono, monospace"
+      },
+      "fontSizes": {
+        "xs": "0.75rem",
+        "sm": "0.875rem", 
+        "base": "1rem",
+        "lg": "1.125rem",
+        "xl": "1.25rem",
+        "2xl": "1.5rem",
+        "3xl": "1.875rem",
+        "4xl": "2.25rem",
+        "5xl": "3rem",
+        "6xl": "3.75rem"
+      },
+      "fontWeights": {
+        "normal": 400,
+        "medium": 500,
+        "semibold": 600,
+        "bold": 700
+      },
+      "lineHeights": {
+        "tight": 1.25,
+        "normal": 1.5,
+        "relaxed": 1.75
+      }
+    },
+
+    "spacing": {
+      "scale": [0, 4, 8, 12, 16, 20, 24, 32, 40, 48, 56, 64, 80, 96, 112, 128],
+      "container": {
+        "sm": "640px",
+        "md": "768px", 
+        "lg": "1024px",
+        "xl": "1280px",
+        "2xl": "1536px"
+      }
+    },
+
+    "borderRadius": {
+      "sm": "0.25rem",
+      "md": "0.375rem",
+      "lg": "0.5rem",
+      "xl": "0.75rem",
+      "2xl": "1rem",
+      "3xl": "1.5rem",
+      "full": "9999px"
+    },
+
+    "shadows": {
+      "sm": "0 1px 2px 0 rgb(0 0 0 / 0.05)",
+      "md": "0 4px 6px -1px rgb(0 0 0 / 0.1)",
+      "lg": "0 10px 15px -3px rgb(0 0 0 / 0.1)",
+      "xl": "0 20px 25px -5px rgb(0 0 0 / 0.1)",
+      "card": "0 4px 6px -1px rgb(0 0 0 / 0.05)",
+      "floating": "0 25px 50px -12px rgb(0 0 0 / 0.15)"
+    }
+  },
+
+  "layoutPatterns": {
+    "hero": {
+      "structure": "split-hero",
+      "leftContent": {
+        "type": "text-cta",
+        "elements": ["headline", "subtext", "primaryCTA", "trustIndicators"]
+      },
+      "rightContent": {
+        "type": "visual-demo",
+        "elements": ["mockup", "savings-highlight", "floating-elements"]
+      },
+      "background": {
+        "type": "gradient-with-geometric-shapes",
+        "pattern": "subtle-geometric-overlay"
+      }
+    },
+
+    "howItWorks": {
+      "structure": "centered-steps",
+      "layout": "mockup-left-steps-right",
+      "steps": {
+        "format": "numbered-list",
+        "style": "minimal-with-descriptions"
+      },
+      "mockup": {
+        "type": "browser-window",
+        "content": "savings-notification",
+        "style": "floating-with-shadow"
+      }
+    },
+
+    "features": {
+      "structure": "grid-layout",
+      "gridCols": 2,
+      "cardStyle": "clean-minimal",
+      "spacing": "generous"
+    },
+
+    "trustSignals": {
+      "structure": "horizontal-logos",
+      "style": "grayscale-with-hover-color",
+      "layout": "centered-with-text-above"
+    }
+  },
+
+  "componentStyles": {
+    "buttons": {
+      "primary": {
+        "background": "primary.main",
+        "color": "white",
+        "padding": "12px 32px",
+        "borderRadius": "lg",
+        "fontWeight": "semibold",
+        "fontSize": "base",
+        "shadow": "md",
+        "hoverState": {
+          "background": "primary.dark",
+          "shadow": "lg",
+          "transform": "translateY(-1px)"
+        }
+      },
+      "secondary": {
+        "background": "transparent",
+        "color": "primary.main", 
+        "border": "2px solid primary.main",
+        "padding": "10px 30px",
+        "borderRadius": "lg"
+      }
+    },
+
+    "cards": {
+      "default": {
+        "background": "white",
+        "borderRadius": "xl",
+        "shadow": "card",
+        "padding": "24px",
+        "border": "1px solid neutral.200"
+      },
+      "feature": {
+        "background": "white",
+        "borderRadius": "2xl", 
+        "shadow": "lg",
+        "padding": "32px",
+        "hoverState": {
+          "shadow": "xl",
+          "transform": "translateY(-2px)"
+        }
+      },
+      "savingsHighlight": {
+        "background": "white",
+        "borderRadius": "xl",
+        "shadow": "floating",
+        "padding": "20px",
+        "border": "2px solid success.light"
+      }
+    },
+
+    "mockups": {
+      "browserWindow": {
+        "background": "white",
+        "borderRadius": "xl",
+        "shadow": "floating",
+        "border": "1px solid neutral.200",
+        "chrome": {
+          "height": "32px",
+          "background": "neutral.100",
+          "borderRadius": "xl xl 0 0"
+        }
+      },
+      "mobileApp": {
+        "background": "neutral.900",
+        "borderRadius": "3xl",
+        "shadow": "xl",
+        "aspectRatio": "9/16"
+      }
+    },
+
+    "icons": {
+      "style": "outline",
+      "strokeWidth": 2,
+      "size": {
+        "sm": "16px",
+        "md": "24px", 
+        "lg": "32px",
+        "xl": "48px"
+      }
+    },
+
+    "inputs": {
+      "textField": {
+        "background": "white",
+        "border": "2px solid neutral.200",
+        "borderRadius": "lg",
+        "padding": "12px 16px",
+        "fontSize": "base",
+        "focusState": {
+          "border": "2px solid primary.main",
+          "shadow": "md"
+        }
+      }
+    }
+  },
+
+  "visualElements": {
+    "geometricShapes": {
+      "circles": {
+        "style": "subtle-background-pattern",
+        "opacity": 0.1,
+        "sizes": ["small", "medium", "large"],
+        "colors": ["primary.light", "secondary.light"]
+      },
+      "currency": {
+        "dollarSign": {
+          "style": "3d-isometric",
+          "material": "glossy-white",
+          "shadow": "soft-floating"
+        },
+        "cryptoCoins": {
+          "style": "flat-with-gradients",
+          "glow": "subtle-outer-glow"
+        }
+      }
+    },
+
+    "illustrations": {
+      "savingsNotification": {
+        "style": "clean-minimal",
+        "colors": ["success.main", "white", "neutral.100"],
+        "elements": ["currency-icon", "saved-amount", "progress-indicator"]
+      }
+    },
+
+    "backgroundPatterns": {
+      "hero": {
+        "type": "gradient-mesh",
+        "colors": ["primary.50", "secondary.50", "white"],
+        "overlay": "geometric-shapes"
+      },
+      "sections": {
+        "type": "subtle-gradient",
+        "direction": "top-to-bottom",
+        "colors": ["white", "neutral.50"]
+      }
+    }
+  },
+
+  "animations": {
+    "transitions": {
+      "default": "all 0.2s ease-in-out",
+      "slow": "all 0.3s ease-in-out"
+    },
+    "hover": {
+      "cards": "translateY(-2px)",
+      "buttons": "translateY(-1px)",
+      "scale": "scale(1.02)"
+    },
+    "pageLoad": {
+      "fadeIn": "opacity 0.6s ease-in",
+      "slideUp": "transform 0.5s ease-out"
+    }
+  },
+
+  "contentStructure": {
+    "headline": {
+      "structure": "benefit-focused",
+      "tone": "confident-helpful",
+      "length": "8-12 words",
+      "format": "We help you [action] + [benefit]"
+    },
+    "subheadline": {
+      "structure": "explanation-with-scale",
+      "includes": ["method", "scale-number", "result"],
+      "tone": "informative-trustworthy"
+    },
+    "features": {
+      "format": "numbered-steps",
+      "titles": "action-oriented",
+      "descriptions": "benefit-focused-brief"
+    },
+    "trustSignals": {
+      "types": ["user-count", "store-count", "ratings", "security-badges"],
+      "placement": "below-cta"
+    }
+  },
+
+  "responsiveBreakpoints": {
+    "mobile": "320px",
+    "tablet": "768px", 
+    "desktop": "1024px",
+    "wide": "1280px"
+  },
+
+  "designPrinciples": {
+    "whitespace": "generous-breathing-room",
+    "hierarchy": "clear-visual-weight-differences", 
+    "contrast": "strong-text-contrast-subtle-backgrounds",
+    "consistency": "repeated-patterns-and-spacing",
+    "accessibility": "wcag-aa-compliant-colors-and-text",
+    "performance": "optimized-images-and-minimal-assets"
+  },
+
+  "cryptoSpecific": {
+    "terminology": {
+      "cashback": "crypto rewards",
+      "savings": "crypto earnings", 
+      "wallet": "crypto wallet",
+      "payout": "crypto payout"
+    },
+    "visualElements": {
+      "cryptoIcons": ["bitcoin", "ethereum", "generic-coin"],
+      "blockchainPattern": "connected-nodes-subtle-background",
+      "cryptoColors": {
+        "bitcoin": "#f7931a",
+        "ethereum": "#627eea", 
+        "generic": "accent.crypto"
+      }
+    },
+    "trustSignals": {
+      "security": ["256-bit-encryption", "cold-storage", "audit-badges"],
+      "compliance": ["kyc-compliant", "regulatory-compliant"]
+    }
+  }
+}

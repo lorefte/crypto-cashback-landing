@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    line-height: 1.5;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', 'Inter', sans-serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary-main text-white px-8 py-3 rounded-lg font-semibold text-base shadow-md hover:bg-primary-dark hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200;
+  }
+  
+  .btn-secondary {
+    @apply bg-transparent text-primary-main border-2 border-primary-main px-8 py-3 rounded-lg font-semibold text-base hover:bg-primary-main hover:text-white transition-all duration-200;
+  }
+  
+  .card {
+    @apply bg-white rounded-2xl shadow-card p-6 border border-neutral-200;
+  }
+  
+  .card-feature {
+    @apply bg-white rounded-3xl shadow-lg p-8 border border-neutral-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300;
+  }
+  
+  .gradient-bg {
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  }
+  
+  .crypto-gradient {
+    background: linear-gradient(135deg, #6366f1 0%, #10b981 50%, #f59e0b 100%);
+  }
+}
