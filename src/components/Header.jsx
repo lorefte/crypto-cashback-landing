@@ -58,15 +58,15 @@ const Header = () => {
                 onClick={() => setIsWaitlistOpen(true)}
                 className="btn-primary flex items-center space-x-2"
               >
-                <Download size={16} />
                 <span>Join Waitlist</span>
+                <Download size={16} />
               </button>
               <a 
                 href="/demo"
                 className="btn-secondary flex items-center space-x-2"
               >
-                <Play size={16} />
                 <span>Try Demo</span>
+                <Play size={16} />
               </a>
               <a 
                 href="https://x.com/Reflowcrypto" 
@@ -115,15 +115,15 @@ const Header = () => {
                   onClick={() => setIsWaitlistOpen(true)}
                   className="btn-primary flex items-center justify-center space-x-2 w-full"
                 >
-                  <Download size={16} />
                   <span>Join Waitlist</span>
+                  <Download size={16} />
                 </button>
                 <a 
                   href="/demo"
                   className="btn-secondary flex items-center justify-center space-x-2 w-full"
                 >
-                  <Play size={16} />
                   <span>Try Demo</span>
+                  <Play size={16} />
                 </a>
                 <div className="flex items-center space-x-3">
                   <a 
