@@ -7,6 +7,15 @@ const Demo = () => {
   const [showCashback, setShowCashback] = useState(false)
   const [cashbackAmount, setCashbackAmount] = useState(0)
   const [walletBalance, setWalletBalance] = useState(125.50)
+  const [selectedCategory, setSelectedCategory] = useState('all')
+
+  const categories = [
+    { id: 'all', name: 'All Products', icon: '🛍️' },
+    { id: 'electronics', name: 'Electronics', icon: '📱' },
+    { id: 'clothing', name: 'Clothing', icon: '👕' },
+    { id: 'home', name: 'Home & Garden', icon: '🏠' },
+    { id: 'sports', name: 'Sports & Fitness', icon: '⚽' }
+  ]
 
   const products = [
     {
@@ -16,7 +25,8 @@ const Demo = () => {
       originalPrice: 299.99,
       image: "https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?w=300&h=300&fit=crop&crop=center",
       cashbackRate: 3.5,
-      store: "Apple Store"
+      store: "Apple Store",
+      category: "electronics"
     },
     {
       id: 2,
@@ -25,7 +35,8 @@ const Demo = () => {
       originalPrice: 899.99,
       image: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=300&h=300&fit=crop&crop=center",
       cashbackRate: 2.8,
-      store: "Best Buy"
+      store: "Best Buy",
+      category: "electronics"
     },
     {
       id: 3,
@@ -34,7 +45,8 @@ const Demo = () => {
       originalPrice: 179.99,
       image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=300&h=300&fit=crop&crop=center",
       cashbackRate: 4.2,
-      store: "Nike"
+      store: "Nike",
+      category: "clothing"
     },
     {
       id: 4,
@@ -43,9 +55,54 @@ const Demo = () => {
       originalPrice: 1299.99,
       image: "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=300&h=300&fit=crop&crop=center",
       cashbackRate: 2.1,
-      store: "Apple Store"
+      store: "Apple Store",
+      category: "electronics"
+    },
+    {
+      id: 5,
+      name: "Adidas Ultraboost 22",
+      price: 189.99,
+      originalPrice: 220.00,
+      image: "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=300&h=300&fit=crop&crop=center",
+      cashbackRate: 3.8,
+      store: "Adidas",
+      category: "clothing"
+    },
+    {
+      id: 6,
+      name: "Dyson V15 Vacuum",
+      price: 649.99,
+      originalPrice: 699.99,
+      image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=300&h=300&fit=crop&crop=center",
+      cashbackRate: 2.5,
+      store: "Target",
+      category: "home"
+    },
+    {
+      id: 7,
+      name: "Yoga Mat Premium",
+      price: 79.99,
+      originalPrice: 99.99,
+      image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=300&h=300&fit=crop&crop=center",
+      cashbackRate: 5.2,
+      store: "Amazon",
+      category: "sports"
+    },
+    {
+      id: 8,
+      name: "KitchenAid Mixer",
+      price: 329.99,
+      originalPrice: 379.99,
+      image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=300&h=300&fit=crop&crop=center",
+      cashbackRate: 3.1,
+      store: "Williams Sonoma",
+      category: "home"
     }
   ]
+
+  const filteredProducts = selectedCategory === 'all' 
+    ? products 
+    : products.filter(product => product.category === selectedCategory)
 
   const handleProductClick = (product) => {
     setSelectedProduct(product)
@@ -117,12 +174,42 @@ const Demo = () => {
 
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 py-8">
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="grid lg:grid-cols-4 gap-8">
+          {/* Category Sidebar */}
+          <div className="lg:col-span-1">
+            <div className="bg-white rounded-lg shadow-md p-6 sticky top-4">
+              <h3 className="font-semibold text-lg mb-4">Categories</h3>
+              <div className="space-y-2">
+                {categories.map((category) => (
+                  <button
+                    key={category.id}
+                    onClick={() => setSelectedCategory(category.id)}
+                    className={`w-full text-left px-3 py-2 rounded-lg transition-colors flex items-center space-x-3 ${
+                      selectedCategory === category.id
+                        ? 'bg-purple-100 text-purple-700 font-medium'
+                        : 'hover:bg-gray-100 text-gray-700'
+                    }`}
+                  >
+                    <span className="text-lg">{category.icon}</span>
+                    <span>{category.name}</span>
+                  </button>
+                ))}
+              </div>
+            </div>
+          </div>
+
           {/* Products Grid */}
           <div className="lg:col-span-2">
-            <h2 className="text-xl font-semibold mb-6">Featured Products</h2>
+            <div className="flex items-center justify-between mb-6">
+              <h2 className="text-xl font-semibold">
+                {selectedCategory === 'all' ? 'All Products' : categories.find(c => c.id === selectedCategory)?.name}
+              </h2>
+              <span className="text-sm text-gray-500">
+                {filteredProducts.length} products
+              </span>
+            </div>
             <div className="grid md:grid-cols-2 gap-6">
-              {products.map((product) => (
+              {filteredProducts.map((product) => (
                 <motion.div
                   key={product.id}
                   className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer"
@@ -156,8 +243,8 @@ const Demo = () => {
             </div>
           </div>
 
-          {/* Sidebar */}
-          <div className="space-y-6">
+          {/* Right Sidebar */}
+          <div className="lg:col-span-1 space-y-6">
             {/* Reflow Extension Info */}
             <div className="bg-white rounded-lg shadow-md p-6">
               <h3 className="font-semibold text-lg mb-4 flex items-center">
