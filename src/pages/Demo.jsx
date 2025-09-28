@@ -26,6 +26,7 @@ const Demo = () => {
       image: "https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?w=300&h=300&fit=crop&crop=center",
       cashbackRate: 3.5,
       store: "Apple Store",
+      storeUrl: "apple.com",
       category: "electronics"
     },
     {
@@ -36,6 +37,7 @@ const Demo = () => {
       image: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=300&h=300&fit=crop&crop=center",
       cashbackRate: 2.8,
       store: "Best Buy",
+      storeUrl: "bestbuy.com",
       category: "electronics"
     },
     {
@@ -46,6 +48,7 @@ const Demo = () => {
       image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=300&h=300&fit=crop&crop=center",
       cashbackRate: 4.2,
       store: "Nike",
+      storeUrl: "nike.com",
       category: "clothing"
     },
     {
@@ -56,6 +59,7 @@ const Demo = () => {
       image: "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=300&h=300&fit=crop&crop=center",
       cashbackRate: 2.1,
       store: "Apple Store",
+      storeUrl: "apple.com",
       category: "electronics"
     },
     {
@@ -66,6 +70,7 @@ const Demo = () => {
       image: "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=300&h=300&fit=crop&crop=center",
       cashbackRate: 3.8,
       store: "Adidas",
+      storeUrl: "adidas.com",
       category: "clothing"
     },
     {
@@ -76,6 +81,7 @@ const Demo = () => {
       image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=300&h=300&fit=crop&crop=center",
       cashbackRate: 2.5,
       store: "Target",
+      storeUrl: "target.com",
       category: "home"
     },
     {
@@ -86,6 +92,7 @@ const Demo = () => {
       image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=300&h=300&fit=crop&crop=center",
       cashbackRate: 5.2,
       store: "Amazon",
+      storeUrl: "amazon.com",
       category: "sports"
     },
     {
@@ -96,6 +103,7 @@ const Demo = () => {
       image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=300&h=300&fit=crop&crop=center",
       cashbackRate: 3.1,
       store: "Williams Sonoma",
+      storeUrl: "williams-sonoma.com",
       category: "home"
     }
   ]
@@ -227,7 +235,18 @@ const Demo = () => {
                       <span className="text-2xl font-bold text-green-600">${product.price}</span>
                       <span className="text-lg text-gray-500 line-through">${product.originalPrice}</span>
                     </div>
-                    <p className="text-sm text-gray-600 mb-3">Available at {product.store}</p>
+                    <p className="text-sm text-gray-600 mb-3">
+                      Available at{' '}
+                      <a 
+                        href={`https://${product.storeUrl}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-600 hover:text-blue-800 underline font-medium"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        {product.storeUrl}
+                      </a>
+                    </p>
                     <div className="flex items-center justify-between">
                       <div className="flex items-center space-x-1 text-green-600">
                         <Zap className="w-4 h-4" />
