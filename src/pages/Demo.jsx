@@ -189,7 +189,9 @@ const Demo = () => {
       <div className="bg-white shadow-sm border-b">
         <div className="max-w-7xl mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <h1 className="text-2xl font-bold text-gray-900">TechStore Showcase</h1>
+            <a href="/" className="text-2xl font-bold text-gray-900 hover:text-blue-600 transition-colors">
+              TechStore Showcase
+            </a>
             <div className="flex items-center space-x-4">
               <ShoppingCart className="w-6 h-6 text-gray-600" />
               <span className="text-sm text-gray-600">Demo Shopping Site</span>
