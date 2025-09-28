@@ -212,14 +212,14 @@ const Demo = () => {
                   <button
                     key={category.id}
                     onClick={() => setSelectedCategory(category.id)}
-                    className={`w-full text-left px-3 py-2 rounded-lg transition-colors flex items-center space-x-3 ${
+                    className={`w-full text-left px-3 py-2 rounded-lg transition-colors flex items-start space-x-3 ${
                       selectedCategory === category.id
                         ? 'bg-purple-100 text-purple-700 font-medium'
                         : 'hover:bg-gray-100 text-gray-700'
                     }`}
                   >
-                    <span className="text-lg">{category.icon}</span>
-                    <span>{category.name}</span>
+                    <span className="text-lg flex-shrink-0">{category.icon}</span>
+                    <span className="text-sm leading-tight break-words">{category.name}</span>
                   </button>
                 ))}
               </div>
