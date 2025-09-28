@@ -147,7 +147,7 @@ const Demo = () => {
             <span className="hidden bg-white text-purple-600 px-2 py-1 rounded text-sm font-bold">R</span>
             <span className="font-bold text-lg">Reflow</span>
             <div className="flex items-center space-x-1 bg-white/20 px-2 py-1 rounded-full">
-              <Zap className="w-4 h-4" />
+              <Zap className="w-5 h-5" />
               <span className="text-sm">Active</span>
             </div>
           </div>
@@ -161,7 +161,7 @@ const Demo = () => {
               onClick={() => window.history.back()}
               className="bg-white/20 hover:bg-white/30 px-3 py-1 rounded-full transition-colors"
             >
-              <ArrowLeft className="w-4 h-4" />
+              <ArrowLeft className="w-5 h-5" />
             </button>
           </div>
         </div>
@@ -271,7 +271,7 @@ const Demo = () => {
                     </p>
                     <div className="space-y-3">
                       <div className="flex items-center space-x-1 text-green-600">
-                        <Zap className="w-4 h-4" />
+                        <Zap className="w-6 h-6" />
                         <span className="text-sm font-medium">{product.cashbackRate}% Cashback</span>
                       </div>
                       <button className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
@@ -313,7 +313,7 @@ const Demo = () => {
               <h3 className="font-semibold text-lg mb-2">Your $REFLOW Wallet</h3>
               <div className="text-3xl font-bold mb-2">${walletBalance.toFixed(2)}</div>
               <div className="flex items-center space-x-2 text-sm opacity-90">
-                <TrendingUp className="w-4 h-4" />
+                <TrendingUp className="w-5 h-5" />
                 <span>+${cashbackAmount.toFixed(2)} pending</span>
               </div>
             </div>
