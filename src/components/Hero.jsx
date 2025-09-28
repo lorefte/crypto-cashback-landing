@@ -40,9 +40,9 @@ const Hero = () => {
             >
               Earn{' '}
               <span className="crypto-gradient bg-clip-text text-transparent">
-                Crypto Rewards
+                Crypto Cashback
               </span>{' '}
-              While You Shop
+              Every Time You Shop
             </motion.h1>
 
             {/* Subheadline */}
@@ -52,8 +52,8 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.6 }}
             >
-              We automatically find coupons at 30,000+ stores and pay you back in cryptocurrency. 
-              Shop normally, earn crypto rewards, and build your digital wealth.
+              Reflow is live. Earn crypto cashback every time you shop. 
+              Spend, save, and watch your crypto flow.
             </motion.p>
 
             {/* Stats */}
@@ -86,7 +86,7 @@ const Hero = () => {
             >
               <button className="btn-primary flex items-center justify-center space-x-2 group">
                 <Download size={20} />
-                <span>Add to Chrome - Free</span>
+                <span>Join Waitlist - Free</span>
                 <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
               </button>
               <button className="btn-secondary">
@@ -149,7 +149,7 @@ const Hero = () => {
                     </div>
                   </div>
 
-                  {/* CryptoCashback Notification */}
+                  {/* Reflow Notification */}
                   <motion.div 
                     className="bg-gradient-to-r from-primary-main to-secondary-main rounded-lg p-4 text-white"
                     initial={{ scale: 0.9, opacity: 0 }}
@@ -162,7 +162,7 @@ const Hero = () => {
                           <span className="text-sm font-bold">₿</span>
                         </div>
                         <div>
-                          <div className="font-semibold">CryptoCashback Found!</div>
+                          <div className="font-semibold">Reflow Found!</div>
                           <div className="text-sm opacity-90">Earn 0.0023 BTC ($50) cashback</div>
                         </div>
                       </div>

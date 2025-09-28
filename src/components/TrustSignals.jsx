@@ -8,21 +8,21 @@ const TrustSignals = () => {
       name: "Sarah Chen",
       role: "Crypto Investor",
       avatar: "SC",
-      content: "I've earned over $500 in Bitcoin just from my regular shopping. CryptoCashback has completely changed how I think about online purchases.",
+      content: "I've earned over $500 in Bitcoin just from my regular shopping. Reflow has completely changed how I think about online purchases.",
       rating: 5
     },
     {
       name: "Mike Rodriguez",
       role: "Tech Enthusiast", 
       avatar: "MR",
-      content: "The automatic coupon detection is incredible. I don't have to think about finding deals anymore - it just works.",
+      content: "The automatic coupon detection is incredible. I don't have to think about finding deals anymore - Reflow just works.",
       rating: 5
     },
     {
       name: "Emily Johnson",
       role: "Frequent Shopper",
       avatar: "EJ", 
-      content: "Finally, a way to earn crypto without trading! My wallet has grown significantly just from shopping online.",
+      content: "Finally, a way to earn crypto without trading! My wallet has grown significantly just from shopping online with Reflow.",
       rating: 5
     }
   ]

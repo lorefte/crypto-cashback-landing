@@ -70,10 +70,10 @@ const Features = () => {
           viewport={{ once: true }}
         >
           <h2 className="text-3xl md:text-4xl font-heading font-bold text-neutral-900 mb-4">
-            Why Choose CryptoCashback?
+            Why Choose Reflow?
           </h2>
           <p className="text-xl text-neutral-600 max-w-2xl mx-auto">
-            The only browser extension that combines automatic coupon finding with cryptocurrency rewards.
+            The only platform that combines automatic coupon finding with cryptocurrency cashback rewards.
           </p>
         </motion.div>
 
@@ -160,10 +160,10 @@ const Features = () => {
           {/* Left: Security Features */}
           <div>
             <h3 className="text-2xl font-heading font-bold text-neutral-900 mb-6">
-              Your Crypto is Safe with Us
+              Your Crypto is Safe with Reflow
             </h3>
             <p className="text-neutral-600 mb-8">
-              We use industry-leading security measures to protect your cryptocurrency rewards and personal information.
+              Reflow uses industry-leading security measures to protect your cryptocurrency rewards and personal information.
             </p>
             
             <div className="space-y-6">

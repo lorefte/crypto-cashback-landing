@@ -23,7 +23,7 @@ const Header = () => {
               <span className="text-white font-bold text-sm">₿</span>
             </div>
             <span className="font-heading font-bold text-xl text-neutral-900">
-              CryptoCashback
+              Reflow
             </span>
           </motion.div>
 
@@ -40,7 +40,7 @@ const Header = () => {
             </a>
             <button className="btn-primary flex items-center space-x-2">
               <Download size={16} />
-              <span>Add to Chrome</span>
+              <span>Join Waitlist</span>
             </button>
           </nav>
 
@@ -73,7 +73,7 @@ const Header = () => {
               </a>
               <button className="btn-primary flex items-center justify-center space-x-2 w-full">
                 <Download size={16} />
-                <span>Add to Chrome</span>
+                <span>Join Waitlist</span>
               </button>
             </nav>
           </motion.div>

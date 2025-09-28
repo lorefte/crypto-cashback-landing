@@ -6,22 +6,22 @@ const HowItWorks = () => {
   const steps = [
     {
       number: "01",
-      title: "Add in Seconds",
-      description: "Install our Chrome extension with just a few clicks. It's 100% free and takes less than 30 seconds.",
+      title: "Join the Waitlist",
+      description: "Sign up for early access to Reflow. Be among the first to earn crypto cashback when we launch.",
       icon: Download,
       color: "primary"
     },
     {
       number: "02", 
-      title: "Shop Like Normal",
-      description: "Browse and shop at 30,000+ stores. We automatically detect when you're on a supported site.",
+      title: "Shop & Earn",
+      description: "Browse and shop at 30,000+ stores. Reflow automatically detects when you're on a supported site.",
       icon: ShoppingCart,
       color: "secondary"
     },
     {
       number: "03",
-      title: "Earn Crypto Rewards",
-      description: "We find the best coupons and pay you back in cryptocurrency. Watch your crypto wallet grow with every purchase.",
+      title: "Watch Your Crypto Flow",
+      description: "Reflow finds the best coupons and pays you back in cryptocurrency. Watch your crypto wallet grow with every purchase.",
       icon: Coins,
       color: "accent"
     }
@@ -120,10 +120,10 @@ const HowItWorks = () => {
             {/* Left: Demo Content */}
             <div>
               <h3 className="text-2xl font-heading font-bold text-neutral-900 mb-4">
-                See CryptoCashback in Action
+                See Reflow in Action
               </h3>
               <p className="text-neutral-600 mb-6">
-                Watch how we automatically find the best deals and convert your savings into cryptocurrency rewards.
+                Watch how Reflow automatically finds the best deals and converts your savings into cryptocurrency rewards.
               </p>
               
               <div className="space-y-4">
@@ -171,7 +171,7 @@ const HowItWorks = () => {
                       <span className="font-semibold">$9.99</span>
                     </div>
                     
-                    {/* CryptoCashback Applied */}
+                    {/* Reflow Applied */}
                     <motion.div 
                       className="bg-primary-main/10 border border-primary-main/20 rounded-lg p-3"
                       initial={{ scale: 0.95, opacity: 0 }}
@@ -181,7 +181,7 @@ const HowItWorks = () => {
                     >
                       <div className="flex justify-between items-center">
                         <div className="flex items-center space-x-2">
-                          <span className="text-primary-main font-semibold">CryptoCashback</span>
+                          <span className="text-primary-main font-semibold">Reflow</span>
                           <span className="text-xs bg-primary-main text-white px-2 py-1 rounded">SAVE20</span>
                         </div>
                         <span className="text-primary-main font-bold">-$40.00</span>

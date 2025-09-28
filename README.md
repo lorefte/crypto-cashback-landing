@@ -1,15 +1,15 @@
-# CryptoCashback Landing Page
+# Reflow Landing Page
 
-A sleek, modern landing page for a crypto cashback shopping extension. Built with React, Tailwind CSS, and Framer Motion for smooth animations.
+A sleek, modern landing page for Reflow - the platform that lets you earn crypto cashback every time you shop. Built with React, Tailwind CSS, and Framer Motion for smooth animations.
 
 ## Features
 
 - **Modern Design**: Clean, professional design following the provided design system
-- **Crypto-Focused**: Emphasizes cryptocurrency rewards and built-in wallet functionality
+- **Crypto-Focused**: Emphasizes cryptocurrency cashback rewards and built-in wallet functionality
 - **Responsive**: Fully responsive design that works on all devices
 - **Smooth Animations**: Beautiful animations and hover effects using Framer Motion
 - **Trust Signals**: Social proof, testimonials, and security certifications
-- **Call-to-Actions**: Clear CTAs for extension download and waitlist signup
+- **Call-to-Actions**: Clear CTAs for waitlist signup and early access
 
 ## Tech Stack
 
@@ -69,7 +69,7 @@ The landing page follows the comprehensive design system defined in `design_syst
 
 ## Key Sections
 
-1. **Hero Section**: Main value proposition with crypto rewards focus
+1. **Hero Section**: Main value proposition with crypto cashback focus
 2. **How It Works**: 3-step process with visual demonstrations
 3. **Features**: Detailed feature explanations with security emphasis
 4. **Trust Signals**: User testimonials, store partnerships, and certifications

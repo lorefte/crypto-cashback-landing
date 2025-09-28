@@ -1,7 +1,7 @@
 {
-  "name": "crypto-cashback-landing",
+  "name": "reflow-landing",
   "version": "1.0.0",
-  "description": "Crypto cashback shopping extension landing page",
+  "description": "Reflow - Earn crypto cashback every time you shop. Spend, save, and watch your crypto flow.",
   "main": "index.js",
   "scripts": {
     "dev": "vite",

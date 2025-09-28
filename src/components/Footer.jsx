@@ -45,13 +45,13 @@ const Footer = () => {
             Ready to Start Earning Crypto?
           </h2>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Join thousands of users earning cryptocurrency rewards while shopping online. 
-            It's free to start and takes less than 30 seconds.
+            Join the waitlist for early access to Reflow. 
+            Be among the first to earn crypto cashback when we launch.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-white text-primary-main px-8 py-3 rounded-lg font-semibold text-base hover:bg-neutral-100 transition-colors flex items-center justify-center space-x-2 group">
               <Download size={20} />
-              <span>Add to Chrome - Free</span>
+              <span>Join Waitlist - Free</span>
               <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
             </button>
             <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold text-base hover:bg-white hover:text-primary-main transition-colors">
@@ -78,12 +78,12 @@ const Footer = () => {
                   <span className="text-white font-bold text-sm">₿</span>
                 </div>
                 <span className="font-heading font-bold text-xl">
-                  CryptoCashback
+                  Reflow
                 </span>
               </motion.div>
               <p className="text-neutral-400 mb-6 leading-relaxed">
-                The browser extension that automatically finds coupons and pays you back in cryptocurrency. 
-                Start earning crypto rewards while shopping online.
+                Reflow is live. Earn crypto cashback every time you shop. 
+                Spend, save, and watch your crypto flow.
               </p>
               <div className="flex space-x-4">
                 <a href="#" className="w-10 h-10 bg-neutral-800 rounded-lg flex items-center justify-center hover:bg-neutral-700 transition-colors">
@@ -162,7 +162,7 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-neutral-400 text-sm">
-              © 2024 CryptoCashback. All rights reserved.
+              © 2024 Reflow. All rights reserved.
             </div>
             <div className="flex items-center space-x-6 text-sm text-neutral-400">
               <span>256-bit SSL Encryption</span>
