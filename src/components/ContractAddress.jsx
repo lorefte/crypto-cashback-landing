@@ -21,7 +21,7 @@ const ContractAddress = () => {
   return (
     <motion.button
       onClick={handleCopy}
-      className="btn-secondary flex items-center space-x-3 group relative px-8 py-4 text-lg whitespace-nowrap"
+      className="btn-secondary flex items-center space-x-2 group relative whitespace-nowrap"
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
     >
@@ -32,9 +32,9 @@ const ContractAddress = () => {
         transition={{ duration: 0.3 }}
       >
         {copied ? (
-          <Check size={20} className="text-accent-success" />
+          <Check size={16} className="text-accent-success" />
         ) : (
-          <Copy size={20} className="group-hover:text-primary-main transition-colors" />
+          <Copy size={16} className="group-hover:text-primary-main transition-colors" />
         )}
       </motion.div>
       
