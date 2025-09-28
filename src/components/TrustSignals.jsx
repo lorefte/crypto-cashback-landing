@@ -87,6 +87,7 @@ const TrustSignals = () => {
 
         {/* Store Partners */}
         <motion.div 
+          id="stores"
           className="text-center mb-8"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
