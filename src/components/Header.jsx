@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Menu, X, Download, Twitter } from 'lucide-react'
+import { Menu, X, Download, Twitter, Play } from 'lucide-react'
 import WaitlistModal from './WaitlistModal'
 import ContractAddress from './ContractAddress'
 
@@ -54,6 +54,13 @@ const Header = () => {
               Stores
             </a>
             <div className="flex items-center space-x-3">
+              <a 
+                href="/demo"
+                className="btn-secondary flex items-center space-x-2"
+              >
+                <Play size={16} />
+                <span>Try Demo</span>
+              </a>
               <button 
                 onClick={() => setIsWaitlistOpen(true)}
                 className="btn-primary flex items-center space-x-2"
@@ -104,6 +111,13 @@ const Header = () => {
                 Stores
               </a>
               <div className="space-y-3">
+                <a 
+                  href="/demo"
+                  className="btn-secondary flex items-center justify-center space-x-2 w-full"
+                >
+                  <Play size={16} />
+                  <span>Try Demo</span>
+                </a>
                 <button 
                   onClick={() => setIsWaitlistOpen(true)}
                   className="btn-primary flex items-center justify-center space-x-2 w-full"

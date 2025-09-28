@@ -1,4 +1,5 @@
 import React from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import Header from './components/Header'
 import Hero from './components/Hero'
@@ -7,8 +8,9 @@ import Features from './components/Features'
 import TrustSignals from './components/TrustSignals'
 import Tokenomics from './components/Tokenomics'
 import Footer from './components/Footer'
+import Demo from './pages/Demo'
 
-function App() {
+function LandingPage() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
@@ -21,6 +23,17 @@ function App() {
       </main>
       <Footer />
     </div>
+  )
+}
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/demo" element={<Demo />} />
+      </Routes>
+    </Router>
   )
 }
 

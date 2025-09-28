@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Download, ArrowRight, Shield, Zap, TrendingUp } from 'lucide-react'
+import { Download, ArrowRight, Shield, Zap, TrendingUp, Play } from 'lucide-react'
 import WaitlistModal from './WaitlistModal'
 import ContractAddress from './ContractAddress'
 
@@ -88,6 +88,14 @@ const Hero = () => {
                 <span>Join Waitlist - Free</span>
                 <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
               </button>
+              <a 
+                href="/demo"
+                className="btn-secondary flex items-center justify-center space-x-2 group"
+              >
+                <Play size={20} />
+                <span>Try Demo</span>
+                <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+              </a>
               <ContractAddress />
             </motion.div>
 
