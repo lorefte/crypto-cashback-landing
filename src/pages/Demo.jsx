@@ -202,9 +202,9 @@ const Demo = () => {
 
       {/* Main Content */}
       <div className="max-w-[1400px] mx-auto px-6 py-8">
-        <div className="grid lg:grid-cols-8 gap-8">
+        <div className="grid lg:grid-cols-9 gap-8">
           {/* Category Sidebar */}
-          <div className="lg:col-span-1">
+          <div className="lg:col-span-2">
             <div className="bg-white rounded-lg shadow-md p-6 sticky top-4">
               <h3 className="font-semibold text-lg mb-4">Categories</h3>
               <div className="space-y-2">
