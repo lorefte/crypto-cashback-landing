@@ -4,7 +4,6 @@ import { motion } from 'framer-motion'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import HowItWorks from './components/HowItWorks'
-import Features from './components/Features'
 import TrustSignals from './components/TrustSignals'
 import Tokenomics from './components/Tokenomics'
 import FAQ from './components/FAQ'
@@ -18,7 +17,6 @@ function LandingPage() {
       <main>
         <Hero />
         <HowItWorks />
-        <Features />
         <TrustSignals />
         <Tokenomics />
         <FAQ />

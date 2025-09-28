@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Star, Users, Award, CheckCircle } from 'lucide-react'
+import { Star, Users, Award } from 'lucide-react'
 
 const TrustSignals = () => {
   const testimonials = [
@@ -70,12 +70,6 @@ const TrustSignals = () => {
     }
   ]
 
-  const certifications = [
-    { name: "SOC 2 Type II", description: "Security Compliance" },
-    { name: "PCI DSS", description: "Payment Security" },
-    { name: "ISO 27001", description: "Information Security" },
-    { name: "256-bit SSL", description: "Data Encryption" }
-  ]
 
   return (
     <section className="py-20 bg-white">
@@ -130,42 +124,6 @@ const TrustSignals = () => {
           </div>
         </motion.div>
 
-        {/* Certifications & Security */}
-        <motion.div 
-          className="bg-neutral-50 rounded-3xl p-8 lg:p-12"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
-          <div className="text-center mb-12">
-            <h3 className="text-2xl font-heading font-bold text-neutral-900 mb-4">
-              Security & Compliance
-            </h3>
-            <p className="text-neutral-600">
-              Your data and crypto rewards are protected by industry-leading security standards.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {certifications.map((cert, index) => (
-              <motion.div
-                key={cert.name}
-                className="text-center"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <div className="w-16 h-16 bg-primary-main/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <CheckCircle className="text-primary-main" size={24} />
-                </div>
-                <h4 className="font-semibold text-neutral-900 mb-1">{cert.name}</h4>
-                <p className="text-sm text-neutral-600">{cert.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
 
       </div>
     </section>

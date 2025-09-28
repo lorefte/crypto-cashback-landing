@@ -47,9 +47,6 @@ const Header = () => {
             <a href="#tokenomics" className="text-neutral-600 hover:text-primary-main transition-colors">
               Tokenomics
             </a>
-            <a href="#features" className="text-neutral-600 hover:text-primary-main transition-colors">
-              Features
-            </a>
             <a href="#stores" className="text-neutral-600 hover:text-primary-main transition-colors">
               Stores
             </a>
@@ -106,9 +103,6 @@ const Header = () => {
               </a>
               <a href="#tokenomics" className="text-neutral-600 hover:text-primary-main transition-colors">
                 Tokenomics
-              </a>
-              <a href="#features" className="text-neutral-600 hover:text-primary-main transition-colors">
-                Features
               </a>
               <a href="#stores" className="text-neutral-600 hover:text-primary-main transition-colors">
                 Stores
