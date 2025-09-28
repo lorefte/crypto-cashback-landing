@@ -26,7 +26,14 @@ const Header = () => {
               src="https://cdn.discordapp.com/attachments/1252971251899830374/1421678062843596921/IMG_6322.png?ex=68d9e85f&is=68d896df&hm=f2aa5d915464c7b9a794824e34228fe5be872e68e302e8f715c37e3633489570&"
               alt="Reflow Logo"
               className="w-8 h-8 rounded-lg object-cover"
+              onError={(e) => {
+                e.target.style.display = 'none';
+                e.target.nextSibling.style.display = 'block';
+              }}
             />
+            <div className="w-8 h-8 crypto-gradient rounded-lg flex items-center justify-center" style={{display: 'none'}}>
+              <span className="text-white font-bold text-sm">R</span>
+            </div>
             <span className="font-heading font-bold text-xl text-neutral-900">
               Reflow
             </span>

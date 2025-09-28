@@ -1,6 +1,7 @@
 {
   "name": "reflow-landing",
   "version": "1.0.0",
+  "type": "module",
   "description": "Reflow - Earn crypto cashback every time you shop. Spend, save, and watch your crypto flow.",
   "main": "index.js",
   "scripts": {
