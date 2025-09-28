@@ -182,7 +182,7 @@ const Demo = () => {
 
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 py-8">
-        <div className="grid lg:grid-cols-4 gap-8">
+        <div className="grid lg:grid-cols-5 gap-8">
           {/* Category Sidebar */}
           <div className="lg:col-span-1">
             <div className="bg-white rounded-lg shadow-md p-6 sticky top-4">
@@ -207,7 +207,7 @@ const Demo = () => {
           </div>
 
           {/* Products Grid */}
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-3">
             <div className="flex items-center justify-between mb-6">
               <h2 className="text-xl font-semibold">
                 {selectedCategory === 'all' ? 'All Products' : categories.find(c => c.id === selectedCategory)?.name}
@@ -216,7 +216,7 @@ const Demo = () => {
                 {filteredProducts.length} products
               </span>
             </div>
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {filteredProducts.map((product) => (
                 <motion.div
                   key={product.id}
