@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Download, Mail, Twitter, ArrowRight } from 'lucide-react'
+import { Download, Twitter, ArrowRight } from 'lucide-react'
 import WaitlistModal from './WaitlistModal'
 import ContractAddress from './ContractAddress'
 
@@ -90,11 +90,8 @@ const Footer = () => {
                 Spend, save, and watch your crypto flow.
               </p>
               <div className="flex space-x-4">
-                <a href="https://placeholder.com/twitter" className="w-10 h-10 bg-neutral-800 rounded-lg flex items-center justify-center hover:bg-neutral-700 transition-colors">
+                <a href="https://x.com/Reflowcrypto" className="w-10 h-10 bg-neutral-800 rounded-lg flex items-center justify-center hover:bg-neutral-700 transition-colors">
                   <Twitter size={18} />
-                </a>
-                <a href="https://placeholder.com/contact" className="w-10 h-10 bg-neutral-800 rounded-lg flex items-center justify-center hover:bg-neutral-700 transition-colors">
-                  <Mail size={18} />
                 </a>
               </div>
             </div>

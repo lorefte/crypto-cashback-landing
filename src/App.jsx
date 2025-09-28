@@ -5,6 +5,7 @@ import Hero from './components/Hero'
 import HowItWorks from './components/HowItWorks'
 import Features from './components/Features'
 import TrustSignals from './components/TrustSignals'
+import Tokenomics from './components/Tokenomics'
 import Footer from './components/Footer'
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <HowItWorks />
         <Features />
         <TrustSignals />
+        <Tokenomics />
       </main>
       <Footer />
     </div>

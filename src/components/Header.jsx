@@ -22,9 +22,11 @@ const Header = () => {
             className="flex items-center space-x-2"
             whileHover={{ scale: 1.05 }}
           >
-            <div className="w-8 h-8 crypto-gradient rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">₿</span>
-            </div>
+            <img 
+              src="https://cdn.discordapp.com/attachments/1252971251899830374/1421678062843596921/IMG_6322.png?ex=68d9e85f&is=68d896df&hm=f2aa5d915464c7b9a794824e34228fe5be872e68e302e8f715c37e3633489570&"
+              alt="Reflow Logo"
+              className="w-8 h-8 rounded-lg object-cover"
+            />
             <span className="font-heading font-bold text-xl text-neutral-900">
               Reflow
             </span>
@@ -34,6 +36,9 @@ const Header = () => {
           <nav className="hidden md:flex items-center space-x-8">
             <a href="#how-it-works" className="text-neutral-600 hover:text-primary-main transition-colors">
               How it Works
+            </a>
+            <a href="#tokenomics" className="text-neutral-600 hover:text-primary-main transition-colors">
+              Tokenomics
             </a>
             <a href="#features" className="text-neutral-600 hover:text-primary-main transition-colors">
               Features
@@ -49,6 +54,14 @@ const Header = () => {
                 <Download size={16} />
                 <span>Join Waitlist</span>
               </button>
+              <a 
+                href="https://x.com/Reflowcrypto" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-neutral-100 hover:bg-neutral-200 rounded-lg flex items-center justify-center transition-colors"
+              >
+                <Twitter size={16} className="text-neutral-600" />
+              </a>
               <ContractAddress />
             </div>
           </nav>
@@ -74,6 +87,9 @@ const Header = () => {
               <a href="#how-it-works" className="text-neutral-600 hover:text-primary-main transition-colors">
                 How it Works
               </a>
+              <a href="#tokenomics" className="text-neutral-600 hover:text-primary-main transition-colors">
+                Tokenomics
+              </a>
               <a href="#features" className="text-neutral-600 hover:text-primary-main transition-colors">
                 Features
               </a>
@@ -88,7 +104,17 @@ const Header = () => {
                   <Download size={16} />
                   <span>Join Waitlist</span>
                 </button>
-                <ContractAddress />
+                <div className="flex items-center space-x-3">
+                  <a 
+                    href="https://x.com/Reflowcrypto" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 bg-neutral-100 hover:bg-neutral-200 rounded-lg flex items-center justify-center transition-colors"
+                  >
+                    <Twitter size={16} className="text-neutral-600" />
+                  </a>
+                  <ContractAddress />
+                </div>
               </div>
             </nav>
           </motion.div>

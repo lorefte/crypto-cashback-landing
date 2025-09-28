@@ -56,59 +56,8 @@ const TrustSignals = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl md:text-4xl font-heading font-bold text-neutral-900 mb-4">
-            Trusted by Thousands of Users
-          </h2>
-          <p className="text-xl text-neutral-600 max-w-2xl mx-auto">
-            Join the growing community of crypto enthusiasts earning rewards while shopping.
-          </p>
         </motion.div>
 
-        {/* Testimonials */}
-        <motion.div 
-          className="grid md:grid-cols-3 gap-8 mb-20"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
-          {testimonials.map((testimonial, index) => (
-            <motion.div
-              key={testimonial.name}
-              className="card"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
-              viewport={{ once: true }}
-              whileHover={{ y: -5 }}
-            >
-              {/* Rating */}
-              <div className="flex items-center space-x-1 mb-4">
-                {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-accent-crypto text-accent-crypto" />
-                ))}
-              </div>
-
-              {/* Content */}
-              <p className="text-neutral-600 mb-6 leading-relaxed">
-                "{testimonial.content}"
-              </p>
-
-              {/* Author */}
-              <div className="flex items-center space-x-3">
-                <div className="w-10 h-10 bg-primary-main/10 rounded-full flex items-center justify-center">
-                  <span className="text-primary-main font-semibold text-sm">
-                    {testimonial.avatar}
-                  </span>
-                </div>
-                <div>
-                  <div className="font-semibold text-neutral-900">{testimonial.name}</div>
-                  <div className="text-sm text-neutral-500">{testimonial.role}</div>
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
 
         {/* Store Partners */}
         <motion.div 
@@ -175,33 +124,6 @@ const TrustSignals = () => {
           </div>
         </motion.div>
 
-        {/* Social Proof Stats */}
-        <motion.div 
-          className="mt-20 text-center"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div>
-              <div className="text-3xl font-bold text-primary-main mb-2">4.9/5</div>
-              <div className="text-neutral-600">Chrome Store Rating</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-secondary-main mb-2">50K+</div>
-              <div className="text-neutral-600">Active Users</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-accent-crypto mb-2">$2.3M+</div>
-              <div className="text-neutral-600">Crypto Earned</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-primary-main mb-2">30K+</div>
-              <div className="text-neutral-600">Supported Stores</div>
-            </div>
-          </div>
-        </motion.div>
       </div>
     </section>
   )
