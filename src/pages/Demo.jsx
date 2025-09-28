@@ -216,7 +216,7 @@ const Demo = () => {
                 {filteredProducts.length} products
               </span>
             </div>
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid md:grid-cols-3 gap-6">
               {filteredProducts.map((product) => (
                 <motion.div
                   key={product.id}
