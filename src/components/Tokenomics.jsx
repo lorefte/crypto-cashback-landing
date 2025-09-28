@@ -69,13 +69,16 @@ const Tokenomics = () => {
     const endAngle = ((cumulativePercentage + item.percentage) / 100) * 360
     cumulativePercentage += item.percentage
     
+    const path = createPieSlice(startAngle, endAngle, 80)
+    
     return {
       ...item,
       startAngle,
       endAngle,
-      path: createPieSlice(startAngle, endAngle, 80)
+      path
     }
   })
+
 
   return (
     <section id="tokenomics" className="py-20 bg-white">
@@ -105,19 +108,23 @@ const Tokenomics = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <div className="relative w-96 h-96">
-              <svg viewBox="0 0 200 200" className="w-full h-full">
+            <div className="relative w-80 h-80 sm:w-96 sm:h-96">
+              <svg 
+                viewBox="0 0 200 200" 
+                className="w-full h-full" 
+                style={{ maxWidth: '100%', height: 'auto' }}
+                xmlns="http://www.w3.org/2000/svg"
+              >
                 {pieData.map((item, index) => (
-                  <motion.path
+                  <path
                     key={item.label}
                     d={item.path}
                     fill={item.color}
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-                    viewport={{ once: true }}
                     className="hover:opacity-80 transition-opacity cursor-pointer"
-                    style={{ transformOrigin: '100px 100px' }}
+                    style={{ 
+                      opacity: 1,
+                      transition: 'opacity 0.3s ease'
+                    }}
                   />
                 ))}
               </svg>
@@ -125,8 +132,8 @@ const Tokenomics = () => {
               {/* Center Text */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-neutral-900">$REFLOW</div>
-                  <div className="text-sm text-neutral-600">Token Distribution</div>
+                  <div className="text-xl sm:text-2xl font-bold text-neutral-900">$REFLOW</div>
+                  <div className="text-xs sm:text-sm text-neutral-600">Token Distribution</div>
                 </div>
               </div>
             </div>
