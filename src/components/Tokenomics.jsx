@@ -129,13 +129,6 @@ const Tokenomics = () => {
                 ))}
               </svg>
               
-              {/* Center Text */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="text-xl sm:text-2xl font-bold text-neutral-900">$REFLOW</div>
-                  <div className="text-xs sm:text-sm text-neutral-600">Token Distribution</div>
-                </div>
-              </div>
             </div>
           </motion.div>
 
