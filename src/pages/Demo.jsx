@@ -247,12 +247,12 @@ const Demo = () => {
                         {product.storeUrl}
                       </a>
                     </p>
-                    <div className="flex items-center justify-between">
+                    <div className="space-y-3">
                       <div className="flex items-center space-x-1 text-green-600">
                         <Zap className="w-4 h-4" />
                         <span className="text-sm font-medium">{product.cashbackRate}% Cashback</span>
                       </div>
-                      <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+                      <button className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
                         View Details
                       </button>
                     </div>
