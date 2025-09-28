@@ -169,7 +169,7 @@ const Demo = () => {
 
       {/* Alert Banner */}
       <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4">
-        <div className="max-w-7xl mx-auto px-4">
+        <div className="max-w-[1400px] mx-auto px-6">
           <div className="flex items-center">
             <div className="flex-shrink-0">
               <svg className="h-5 w-5 text-yellow-400" viewBox="0 0 20 20" fill="currentColor">
@@ -187,7 +187,7 @@ const Demo = () => {
 
       {/* Fake Shopping Site Header */}
       <div className="bg-white shadow-sm border-b">
-        <div className="max-w-7xl mx-auto px-4 py-4">
+        <div className="max-w-[1400px] mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <a href="/" className="text-2xl font-bold text-gray-900 hover:text-blue-600 transition-colors">
               TechStore Showcase
@@ -201,10 +201,10 @@ const Demo = () => {
       </div>
 
       {/* Main Content */}
-      <div className="max-w-7xl mx-auto px-4 py-8">
-        <div className="grid lg:grid-cols-6 gap-8">
+      <div className="max-w-[1400px] mx-auto px-6 py-8">
+        <div className="grid lg:grid-cols-8 gap-8">
           {/* Category Sidebar */}
-          <div className="lg:col-span-1">
+          <div className="lg:col-span-2">
             <div className="bg-white rounded-lg shadow-md p-6 sticky top-4">
               <h3 className="font-semibold text-lg mb-4">Categories</h3>
               <div className="space-y-2">
@@ -285,7 +285,7 @@ const Demo = () => {
           </div>
 
           {/* Right Sidebar */}
-          <div className="lg:col-span-1 space-y-6">
+          <div className="lg:col-span-2 space-y-6">
             {/* Reflow Extension Info */}
             <div className="bg-white rounded-lg shadow-md p-6">
               <h3 className="font-semibold text-lg mb-4 flex items-center">
