@@ -242,11 +242,13 @@ const Demo = () => {
                   whileHover={{ scale: 1.02 }}
                   onClick={() => handleProductClick(product)}
                 >
-                  <img 
-                    src={product.image} 
-                    alt={product.name}
-                    className="w-full h-48 object-cover"
-                  />
+                  <div className="w-full h-48 overflow-hidden">
+                    <img 
+                      src={product.image} 
+                      alt={product.name}
+                      className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+                    />
+                  </div>
                   <div className="p-4">
                     <h3 className="font-semibold text-lg mb-2">{product.name}</h3>
                     <div className="flex items-center space-x-2 mb-2">
