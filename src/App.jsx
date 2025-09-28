@@ -7,6 +7,7 @@ import HowItWorks from './components/HowItWorks'
 import Features from './components/Features'
 import TrustSignals from './components/TrustSignals'
 import Tokenomics from './components/Tokenomics'
+import FAQ from './components/FAQ'
 import Footer from './components/Footer'
 import Demo from './pages/Demo'
 
@@ -20,6 +21,7 @@ function LandingPage() {
         <Features />
         <TrustSignals />
         <Tokenomics />
+        <FAQ />
       </main>
       <Footer />
     </div>

@@ -53,6 +53,9 @@ const Header = () => {
             <a href="#stores" className="text-neutral-600 hover:text-primary-main transition-colors">
               Stores
             </a>
+            <a href="#faq" className="text-neutral-600 hover:text-primary-main transition-colors">
+              FAQ
+            </a>
             <div className="flex items-center space-x-3">
               <a 
                 href="/demo"
@@ -109,6 +112,9 @@ const Header = () => {
               </a>
               <a href="#stores" className="text-neutral-600 hover:text-primary-main transition-colors">
                 Stores
+              </a>
+              <a href="#faq" className="text-neutral-600 hover:text-primary-main transition-colors">
+                FAQ
               </a>
               <div className="space-y-3">
                 <a 
