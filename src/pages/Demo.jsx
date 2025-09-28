@@ -1,13 +1,12 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ArrowLeft, ShoppingCart, Zap, DollarSign, TrendingUp, CheckCircle } from 'lucide-react'
+import { ArrowLeft, ShoppingCart, Zap, TrendingUp, CheckCircle } from 'lucide-react'
 
 const Demo = () => {
   const [selectedProduct, setSelectedProduct] = useState(null)
   const [showCashback, setShowCashback] = useState(false)
   const [cashbackAmount, setCashbackAmount] = useState(0)
   const [walletBalance, setWalletBalance] = useState(125.50)
-  const [isExtensionActive, setIsExtensionActive] = useState(true)
 
   const products = [
     {
