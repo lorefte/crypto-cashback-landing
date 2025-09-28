@@ -59,21 +59,6 @@ const Features = () => {
   return (
     <section id="features" className="py-20 bg-neutral-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <motion.div 
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
-          <h2 className="text-3xl md:text-4xl font-heading font-bold text-neutral-900 mb-4">
-            Why Choose Reflow?
-          </h2>
-          <p className="text-xl text-neutral-600 max-w-2xl mx-auto">
-            The only platform that combines automatic coupon finding with cryptocurrency cashback rewards.
-          </p>
-        </motion.div>
 
         {/* Features Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
