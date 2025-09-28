@@ -21,7 +21,7 @@ const ContractAddress = () => {
   return (
     <motion.button
       onClick={handleCopy}
-      className="btn-secondary flex items-center space-x-3 group relative px-8 py-4 text-lg"
+      className="btn-secondary flex items-center space-x-3 group relative px-8 py-4 text-lg whitespace-nowrap"
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
     >
