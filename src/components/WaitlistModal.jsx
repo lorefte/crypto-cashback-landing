@@ -45,12 +45,11 @@ const WaitlistModal = ({ isOpen, onClose }) => {
 
           {/* Modal */}
           <motion.div
-            className="relative bg-white rounded-2xl shadow-2xl max-w-md w-full p-8"
+            className="relative bg-white rounded-2xl shadow-2xl max-w-md w-full p-8 mx-4"
             initial={{ scale: 0.9, opacity: 0, y: 20 }}
             animate={{ scale: 1, opacity: 1, y: 0 }}
             exit={{ scale: 0.9, opacity: 0, y: 20 }}
             transition={{ type: "spring", duration: 0.5 }}
-            style={{ marginTop: '40px' }}
           >
             {/* Close Button */}
             <button

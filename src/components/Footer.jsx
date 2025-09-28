@@ -55,7 +55,7 @@ const Footer = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-white text-primary-main px-8 py-3 rounded-lg font-semibold text-base hover:bg-neutral-100 transition-colors flex items-center justify-center space-x-2 group">
               <Download size={20} />
-              <span>Join Waitlist - Free</span>
+              <span>Join Free Waitlist</span>
               <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
             </button>
             <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold text-base hover:bg-white hover:text-primary-main transition-colors">
