@@ -56,17 +56,17 @@ const Header = () => {
             <div className="flex items-center space-x-3">
               <button 
                 onClick={() => setIsWaitlistOpen(true)}
-                className="btn-primary flex items-center space-x-2"
+                className="btn-primary flex items-center space-x-2 whitespace-nowrap"
               >
                 <span>Join Waitlist</span>
-                <Download size={16} />
+                <Download size={20} />
               </button>
               <a 
                 href="/demo"
-                className="btn-secondary flex items-center space-x-2"
+                className="btn-secondary flex items-center space-x-2 whitespace-nowrap"
               >
                 <span>Try Demo</span>
-                <Play size={16} />
+                <Play size={20} />
               </a>
               <a 
                 href="https://x.com/Reflowcrypto" 
@@ -113,17 +113,17 @@ const Header = () => {
               <div className="space-y-3">
                 <button 
                   onClick={() => setIsWaitlistOpen(true)}
-                  className="btn-primary flex items-center justify-center space-x-2 w-full"
+                  className="btn-primary flex items-center justify-center space-x-2 w-full whitespace-nowrap"
                 >
                   <span>Join Waitlist</span>
-                  <Download size={16} />
+                  <Download size={20} />
                 </button>
                 <a 
                   href="/demo"
-                  className="btn-secondary flex items-center justify-center space-x-2 w-full"
+                  className="btn-secondary flex items-center justify-center space-x-2 w-full whitespace-nowrap"
                 >
                   <span>Try Demo</span>
-                  <Play size={16} />
+                  <Play size={20} />
                 </a>
                 <div className="flex items-center space-x-3">
                   <a 
