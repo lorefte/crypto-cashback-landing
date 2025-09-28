@@ -242,7 +242,7 @@ const Demo = () => {
                   whileHover={{ scale: 1.02 }}
                   onClick={() => handleProductClick(product)}
                 >
-                  <div className="w-full h-48 overflow-hidden">
+                  <div className="w-full h-72 overflow-hidden">
                     <img 
                       src={product.image} 
                       alt={product.name}
