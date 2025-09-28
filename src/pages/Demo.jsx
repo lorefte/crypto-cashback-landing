@@ -21,7 +21,7 @@ const Demo = () => {
     {
       id: 1,
       name: "AirPods Pro (2nd Gen)",
-      price: 249.99,
+      price: 289.49,
       originalPrice: 299.99,
       image: "https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?w=300&h=300&fit=crop&crop=center",
       cashbackRate: 3.5,
@@ -32,7 +32,7 @@ const Demo = () => {
     {
       id: 2,
       name: "Samsung Galaxy S24",
-      price: 799.99,
+      price: 874.79,
       originalPrice: 899.99,
       image: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=300&h=300&fit=crop&crop=center",
       cashbackRate: 2.8,
@@ -43,7 +43,7 @@ const Demo = () => {
     {
       id: 3,
       name: "Nike Air Max 270",
-      price: 149.99,
+      price: 172.43,
       originalPrice: 179.99,
       image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=300&h=300&fit=crop&crop=center",
       cashbackRate: 4.2,
@@ -54,7 +54,7 @@ const Demo = () => {
     {
       id: 4,
       name: "MacBook Air M2",
-      price: 1199.99,
+      price: 1272.69,
       originalPrice: 1299.99,
       image: "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=300&h=300&fit=crop&crop=center",
       cashbackRate: 2.1,
@@ -65,7 +65,7 @@ const Demo = () => {
     {
       id: 5,
       name: "Adidas Ultraboost 22",
-      price: 189.99,
+      price: 211.64,
       originalPrice: 220.00,
       image: "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=300&h=300&fit=crop&crop=center",
       cashbackRate: 3.8,
@@ -76,7 +76,7 @@ const Demo = () => {
     {
       id: 6,
       name: "Dyson V15 Vacuum",
-      price: 649.99,
+      price: 682.49,
       originalPrice: 699.99,
       image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=300&h=300&fit=crop&crop=center",
       cashbackRate: 2.5,
@@ -87,7 +87,7 @@ const Demo = () => {
     {
       id: 7,
       name: "Yoga Mat Premium",
-      price: 79.99,
+      price: 94.79,
       originalPrice: 99.99,
       image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=300&h=300&fit=crop&crop=center",
       cashbackRate: 5.2,
@@ -98,7 +98,7 @@ const Demo = () => {
     {
       id: 8,
       name: "KitchenAid Mixer",
-      price: 329.99,
+      price: 368.21,
       originalPrice: 379.99,
       image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=300&h=300&fit=crop&crop=center",
       cashbackRate: 3.1,
@@ -216,7 +216,7 @@ const Demo = () => {
                 {filteredProducts.length} products
               </span>
             </div>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-6">
               {filteredProducts.map((product) => (
                 <motion.div
                   key={product.id}
