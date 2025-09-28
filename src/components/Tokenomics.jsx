@@ -41,7 +41,28 @@ const Tokenomics = () => {
     }
   ]
 
-  // Calculate cumulative percentages for pie chart
+  // Calculate pie chart paths
+  const createPieSlice = (startAngle, endAngle, radius) => {
+    const start = polarToCartesian(100, 100, radius, endAngle)
+    const end = polarToCartesian(100, 100, radius, startAngle)
+    const largeArcFlag = endAngle - startAngle <= 180 ? "0" : "1"
+    
+    return [
+      "M", 100, 100,
+      "L", start.x, start.y,
+      "A", radius, radius, 0, largeArcFlag, 0, end.x, end.y,
+      "Z"
+    ].join(" ")
+  }
+
+  const polarToCartesian = (centerX, centerY, radius, angleInDegrees) => {
+    const angleInRadians = (angleInDegrees - 90) * Math.PI / 180.0
+    return {
+      x: centerX + (radius * Math.cos(angleInRadians)),
+      y: centerY + (radius * Math.sin(angleInRadians))
+    }
+  }
+
   let cumulativePercentage = 0
   const pieData = tokenomicsData.map(item => {
     const startAngle = (cumulativePercentage / 100) * 360
@@ -51,7 +72,8 @@ const Tokenomics = () => {
     return {
       ...item,
       startAngle,
-      endAngle
+      endAngle,
+      path: createPieSlice(startAngle, endAngle, 80)
     }
   })
 
@@ -83,34 +105,21 @@ const Tokenomics = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <div className="relative w-80 h-80">
-              <svg viewBox="0 0 200 200" className="w-full h-full transform -rotate-90">
-                {pieData.map((item, index) => {
-                  const radius = 80
-                  const circumference = 2 * Math.PI * radius
-                  const strokeDasharray = circumference
-                  const strokeDashoffset = circumference - (item.percentage / 100) * circumference
-                  
-                  return (
-                    <motion.circle
-                      key={item.label}
-                      cx="100"
-                      cy="100"
-                      r={radius}
-                      fill="transparent"
-                      stroke={item.color}
-                      strokeWidth="40"
-                      strokeDasharray={strokeDasharray}
-                      strokeDashoffset={strokeDashoffset}
-                      strokeLinecap="round"
-                      initial={{ strokeDashoffset: circumference }}
-                      whileInView={{ strokeDashoffset }}
-                      transition={{ duration: 1.5, delay: index * 0.1 }}
-                      viewport={{ once: true }}
-                      className="hover:opacity-80 transition-opacity cursor-pointer"
-                    />
-                  )
-                })}
+            <div className="relative w-96 h-96">
+              <svg viewBox="0 0 200 200" className="w-full h-full">
+                {pieData.map((item, index) => (
+                  <motion.path
+                    key={item.label}
+                    d={item.path}
+                    fill={item.color}
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.8, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    className="hover:opacity-80 transition-opacity cursor-pointer"
+                    style={{ transformOrigin: '100px 100px' }}
+                  />
+                ))}
               </svg>
               
               {/* Center Text */}
