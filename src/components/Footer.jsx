@@ -1,32 +1,36 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Download, Mail, Twitter, Github, ArrowRight } from 'lucide-react'
+import { Download, Mail, Twitter, ArrowRight } from 'lucide-react'
+import WaitlistModal from './WaitlistModal'
+import ContractAddress from './ContractAddress'
 
 const Footer = () => {
+  const [isWaitlistOpen, setIsWaitlistOpen] = useState(false)
+  
   const footerLinks = {
     product: [
-      { name: 'How it Works', href: '#how-it-works' },
-      { name: 'Features', href: '#features' },
-      { name: 'Supported Stores', href: '#stores' },
-      { name: 'Crypto Wallet', href: '#wallet' }
+      { name: 'How it Works', href: 'https://placeholder.com/how-it-works' },
+      { name: 'Features', href: 'https://placeholder.com/features' },
+      { name: 'Supported Stores', href: 'https://placeholder.com/stores' },
+      { name: 'Crypto Wallet', href: 'https://placeholder.com/wallet' }
     ],
     company: [
-      { name: 'About Us', href: '#about' },
-      { name: 'Blog', href: '#blog' },
-      { name: 'Careers', href: '#careers' },
-      { name: 'Press', href: '#press' }
+      { name: 'About Us', href: 'https://placeholder.com/about' },
+      { name: 'Blog', href: 'https://placeholder.com/blog' },
+      { name: 'Careers', href: 'https://placeholder.com/careers' },
+      { name: 'Press', href: 'https://placeholder.com/press' }
     ],
     support: [
-      { name: 'Help Center', href: '#help' },
-      { name: 'Contact Us', href: '#contact' },
-      { name: 'Privacy Policy', href: '#privacy' },
-      { name: 'Terms of Service', href: '#terms' }
+      { name: 'Help Center', href: 'https://placeholder.com/help' },
+      { name: 'Contact Us', href: 'https://placeholder.com/contact' },
+      { name: 'Privacy Policy', href: 'https://placeholder.com/privacy' },
+      { name: 'Terms of Service', href: 'https://placeholder.com/terms' }
     ],
     security: [
-      { name: 'Security', href: '#security' },
-      { name: 'Compliance', href: '#compliance' },
-      { name: 'Audit Reports', href: '#audits' },
-      { name: 'Bug Bounty', href: '#bounty' }
+      { name: 'Security', href: 'https://placeholder.com/security' },
+      { name: 'Compliance', href: 'https://placeholder.com/compliance' },
+      { name: 'Audit Reports', href: 'https://placeholder.com/audits' },
+      { name: 'Bug Bounty', href: 'https://placeholder.com/bounty' }
     ]
   }
 
@@ -86,13 +90,10 @@ const Footer = () => {
                 Spend, save, and watch your crypto flow.
               </p>
               <div className="flex space-x-4">
-                <a href="#" className="w-10 h-10 bg-neutral-800 rounded-lg flex items-center justify-center hover:bg-neutral-700 transition-colors">
+                <a href="https://placeholder.com/twitter" className="w-10 h-10 bg-neutral-800 rounded-lg flex items-center justify-center hover:bg-neutral-700 transition-colors">
                   <Twitter size={18} />
                 </a>
-                <a href="#" className="w-10 h-10 bg-neutral-800 rounded-lg flex items-center justify-center hover:bg-neutral-700 transition-colors">
-                  <Github size={18} />
-                </a>
-                <a href="#" className="w-10 h-10 bg-neutral-800 rounded-lg flex items-center justify-center hover:bg-neutral-700 transition-colors">
+                <a href="https://placeholder.com/contact" className="w-10 h-10 bg-neutral-800 rounded-lg flex items-center justify-center hover:bg-neutral-700 transition-colors">
                   <Mail size={18} />
                 </a>
               </div>
@@ -162,7 +163,7 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-neutral-400 text-sm">
-              © 2024 Reflow. All rights reserved.
+              © 2025 Reflow. All rights reserved.
             </div>
             <div className="flex items-center space-x-6 text-sm text-neutral-400">
               <span>256-bit SSL Encryption</span>

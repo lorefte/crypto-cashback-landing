@@ -53,8 +53,6 @@ const Features = () => {
 
   const stats = [
     { label: "Stores Supported", value: "30,000+" },
-    { label: "Crypto Earned", value: "$2.3M+" },
-    { label: "Active Users", value: "50K+" },
     { label: "Average Savings", value: "15%" }
   ]
 
@@ -128,7 +126,7 @@ const Features = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 gap-8 max-w-md mx-auto">
             {stats.map((stat, index) => (
               <motion.div 
                 key={stat.label}

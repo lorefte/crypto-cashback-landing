@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Download, ArrowRight, Shield, Zap, TrendingUp } from 'lucide-react'
+import WaitlistModal from './WaitlistModal'
+import ContractAddress from './ContractAddress'
 
 const Hero = () => {
+  const [isWaitlistOpen, setIsWaitlistOpen] = useState(false)
+  
   return (
     <section className="pt-20 pb-16 gradient-bg overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -52,13 +56,13 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.6 }}
             >
-              Reflow is live. Earn crypto cashback every time you shop. 
-              Spend, save, and watch your crypto flow.
+              Earn crypto cashback every time you shop. 
+              Spend, save, and watch your crypto flow. Powered by $REFLOW.
             </motion.p>
 
             {/* Stats */}
             <motion.div 
-              className="flex items-center space-x-8"
+              className="flex items-center justify-center"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5, duration: 0.6 }}
@@ -66,14 +70,6 @@ const Hero = () => {
               <div className="text-center">
                 <div className="text-2xl font-bold text-primary-main">30,000+</div>
                 <div className="text-sm text-neutral-600">Stores</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-secondary-main">$2.3M+</div>
-                <div className="text-sm text-neutral-600">Crypto Earned</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-accent-crypto">50K+</div>
-                <div className="text-sm text-neutral-600">Active Users</div>
               </div>
             </motion.div>
 
@@ -84,28 +80,17 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.6 }}
             >
-              <button className="btn-primary flex items-center justify-center space-x-2 group">
+              <button 
+                onClick={() => setIsWaitlistOpen(true)}
+                className="btn-primary flex items-center justify-center space-x-2 group"
+              >
                 <Download size={20} />
                 <span>Join Waitlist - Free</span>
                 <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
               </button>
-              <button className="btn-secondary">
-                Join Waitlist
-              </button>
+              <ContractAddress />
             </motion.div>
 
-            {/* Trust Signals */}
-            <motion.div 
-              className="flex items-center space-x-4 text-sm text-neutral-500"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.7, duration: 0.6 }}
-            >
-              <div className="flex items-center space-x-1">
-                <TrendingUp size={14} />
-                <span>Trusted by crypto enthusiasts</span>
-              </div>
-            </motion.div>
           </motion.div>
 
           {/* Right Content - Visual Demo */}
@@ -137,9 +122,15 @@ const Hero = () => {
                   {/* Product Card */}
                   <div className="border border-neutral-200 rounded-lg p-4">
                     <div className="flex space-x-4">
-                      <div className="w-16 h-16 bg-neutral-100 rounded-lg"></div>
+                      <div className="w-16 h-16 bg-neutral-100 rounded-lg flex items-center justify-center overflow-hidden">
+                        <img 
+                          src="https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?w=100&h=100&fit=crop&crop=center" 
+                          alt="AirPods Max"
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
                       <div className="flex-1">
-                        <h3 className="font-semibold text-neutral-900">Wireless Headphones</h3>
+                        <h3 className="font-semibold text-neutral-900">AirPod Pro</h3>
                         <p className="text-neutral-600 text-sm">Premium quality sound</p>
                         <div className="flex items-center space-x-2 mt-2">
                           <span className="text-lg font-bold text-neutral-900">$199.99</span>
@@ -213,6 +204,12 @@ const Hero = () => {
           </motion.div>
         </div>
       </div>
+      
+      {/* Waitlist Modal */}
+      <WaitlistModal 
+        isOpen={isWaitlistOpen} 
+        onClose={() => setIsWaitlistOpen(false)} 
+      />
     </section>
   )
 }

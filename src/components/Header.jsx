@@ -1,9 +1,12 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Menu, X, Download } from 'lucide-react'
+import WaitlistModal from './WaitlistModal'
+import ContractAddress from './ContractAddress'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isWaitlistOpen, setIsWaitlistOpen] = useState(false)
 
   return (
     <motion.header 
@@ -38,10 +41,16 @@ const Header = () => {
             <a href="#stores" className="text-neutral-600 hover:text-primary-main transition-colors">
               Stores
             </a>
-            <button className="btn-primary flex items-center space-x-2">
-              <Download size={16} />
-              <span>Join Waitlist</span>
-            </button>
+            <div className="flex items-center space-x-3">
+              <button 
+                onClick={() => setIsWaitlistOpen(true)}
+                className="btn-primary flex items-center space-x-2"
+              >
+                <Download size={16} />
+                <span>Join Waitlist</span>
+              </button>
+              <ContractAddress />
+            </div>
           </nav>
 
           {/* Mobile menu button */}
@@ -71,14 +80,26 @@ const Header = () => {
               <a href="#stores" className="text-neutral-600 hover:text-primary-main transition-colors">
                 Stores
               </a>
-              <button className="btn-primary flex items-center justify-center space-x-2 w-full">
-                <Download size={16} />
-                <span>Join Waitlist</span>
-              </button>
+              <div className="space-y-3">
+                <button 
+                  onClick={() => setIsWaitlistOpen(true)}
+                  className="btn-primary flex items-center justify-center space-x-2 w-full"
+                >
+                  <Download size={16} />
+                  <span>Join Waitlist</span>
+                </button>
+                <ContractAddress />
+              </div>
             </nav>
           </motion.div>
         )}
       </div>
+      
+      {/* Waitlist Modal */}
+      <WaitlistModal 
+        isOpen={isWaitlistOpen} 
+        onClose={() => setIsWaitlistOpen(false)} 
+      />
     </motion.header>
   )
 }
