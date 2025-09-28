@@ -54,13 +54,6 @@ const Header = () => {
               FAQ
             </a>
             <div className="flex items-center space-x-3">
-              <a 
-                href="/demo"
-                className="btn-secondary flex items-center space-x-2"
-              >
-                <Play size={16} />
-                <span>Try Demo</span>
-              </a>
               <button 
                 onClick={() => setIsWaitlistOpen(true)}
                 className="btn-primary flex items-center space-x-2"
@@ -68,6 +61,13 @@ const Header = () => {
                 <Download size={16} />
                 <span>Join Waitlist</span>
               </button>
+              <a 
+                href="/demo"
+                className="btn-secondary flex items-center space-x-2"
+              >
+                <Play size={16} />
+                <span>Try Demo</span>
+              </a>
               <a 
                 href="https://x.com/Reflowcrypto" 
                 target="_blank" 
@@ -111,13 +111,6 @@ const Header = () => {
                 FAQ
               </a>
               <div className="space-y-3">
-                <a 
-                  href="/demo"
-                  className="btn-secondary flex items-center justify-center space-x-2 w-full"
-                >
-                  <Play size={16} />
-                  <span>Try Demo</span>
-                </a>
                 <button 
                   onClick={() => setIsWaitlistOpen(true)}
                   className="btn-primary flex items-center justify-center space-x-2 w-full"
@@ -125,6 +118,13 @@ const Header = () => {
                   <Download size={16} />
                   <span>Join Waitlist</span>
                 </button>
+                <a 
+                  href="/demo"
+                  className="btn-secondary flex items-center justify-center space-x-2 w-full"
+                >
+                  <Play size={16} />
+                  <span>Try Demo</span>
+                </a>
                 <div className="flex items-center space-x-3">
                   <a 
                     href="https://x.com/Reflowcrypto" 
