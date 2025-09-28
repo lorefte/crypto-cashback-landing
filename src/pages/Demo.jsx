@@ -227,7 +227,7 @@ const Demo = () => {
           </div>
 
           {/* Products Grid */}
-          <div className="lg:col-span-5">
+          <div className="lg:col-span-6">
             <div className="flex items-center justify-between mb-6">
               <h2 className="text-xl font-semibold">
                 {selectedCategory === 'all' ? 'All Products' : categories.find(c => c.id === selectedCategory)?.name}
@@ -285,7 +285,7 @@ const Demo = () => {
           </div>
 
           {/* Right Sidebar */}
-          <div className="lg:col-span-2 space-y-6">
+          <div className="lg:col-span-1 space-y-6">
             {/* Reflow Extension Info */}
             <div className="bg-white rounded-lg shadow-md p-6">
               <h3 className="font-semibold text-lg mb-4 flex items-center">
