@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Menu, X, Download } from 'lucide-react'
+import { Menu, X, Download, Twitter } from 'lucide-react'
 import WaitlistModal from './WaitlistModal'
 import ContractAddress from './ContractAddress'
 
