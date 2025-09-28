@@ -28,14 +28,46 @@ const TrustSignals = () => {
   ]
 
   const storeLogos = [
-    { name: "Amazon", logo: "AMZN" },
-    { name: "eBay", logo: "EBAY" },
-    { name: "Best Buy", logo: "BBY" },
-    { name: "Target", logo: "TGT" },
-    { name: "Walmart", logo: "WMT" },
-    { name: "Nike", logo: "NIKE" },
-    { name: "Apple", logo: "AAPL" },
-    { name: "Microsoft", logo: "MSFT" }
+    { 
+      name: "Amazon", 
+      logo: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg",
+      alt: "Amazon"
+    },
+    { 
+      name: "eBay", 
+      logo: "https://upload.wikimedia.org/wikipedia/commons/1/1b/EBay_logo.svg",
+      alt: "eBay"
+    },
+    { 
+      name: "Best Buy", 
+      logo: "https://upload.wikimedia.org/wikipedia/commons/9/9e/Best_Buy_Logo.svg",
+      alt: "Best Buy"
+    },
+    { 
+      name: "Target", 
+      logo: "https://upload.wikimedia.org/wikipedia/commons/9/9a/Target_logo.svg",
+      alt: "Target"
+    },
+    { 
+      name: "Walmart", 
+      logo: "https://upload.wikimedia.org/wikipedia/commons/c/ca/Walmart_logo.svg",
+      alt: "Walmart"
+    },
+    { 
+      name: "Nike", 
+      logo: "https://upload.wikimedia.org/wikipedia/commons/a/a6/Logo_NIKE.svg",
+      alt: "Nike"
+    },
+    { 
+      name: "Apple", 
+      logo: "https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg",
+      alt: "Apple"
+    },
+    { 
+      name: "Microsoft", 
+      logo: "https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg",
+      alt: "Microsoft"
+    }
   ]
 
   const certifications = [
@@ -74,14 +106,25 @@ const TrustSignals = () => {
             {storeLogos.map((store, index) => (
               <motion.div
                 key={store.name}
-                className="flex items-center justify-center h-12 bg-neutral-100 rounded-lg hover:bg-neutral-200 transition-colors"
+                className="flex items-center justify-center h-12 bg-white rounded-lg hover:bg-neutral-50 transition-colors border border-neutral-200 hover:border-neutral-300"
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.3, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 whileHover={{ scale: 1.05 }}
               >
-                <span className="text-neutral-600 font-semibold text-sm">{store.logo}</span>
+                <img 
+                  src={store.logo} 
+                  alt={store.alt}
+                  className="h-6 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
+                  onError={(e) => {
+                    e.target.style.display = 'none';
+                    e.target.nextSibling.style.display = 'block';
+                  }}
+                />
+                <span className="text-neutral-600 font-semibold text-xs" style={{display: 'none'}}>
+                  {store.name}
+                </span>
               </motion.div>
             ))}
           </div>
