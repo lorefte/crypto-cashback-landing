@@ -84,15 +84,15 @@ const Hero = () => {
                 onClick={() => setIsWaitlistOpen(true)}
                 className="btn-primary flex items-center justify-center space-x-2 group whitespace-nowrap"
               >
+                <span>Join Waitlist</span>
                 <Download size={16} />
-                <span>Join Free Waitlist</span>
               </button>
               <a 
                 href="/demo"
                 className="btn-secondary flex items-center justify-center space-x-2 group whitespace-nowrap"
               >
-                <Play size={16} />
                 <span>Try Demo</span>
+                <Play size={16} />
               </a>
               <ContractAddress />
             </motion.div>
