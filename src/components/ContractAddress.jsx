@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Copy, Check } from 'lucide-react'
 
-const ContractAddress = () => {
+const ContractAddress = ({ className = "" }) => {
   const [copied, setCopied] = useState(false)
   
   // Placeholder contract address - replace with actual address
@@ -21,7 +21,7 @@ const ContractAddress = () => {
   return (
     <motion.button
       onClick={handleCopy}
-      className="btn-secondary flex items-center space-x-2 group relative whitespace-nowrap"
+      className={`btn-secondary flex items-center space-x-2 group relative whitespace-nowrap ${className}`}
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
     >

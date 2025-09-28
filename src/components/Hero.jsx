@@ -75,7 +75,7 @@ const Hero = () => {
 
             {/* CTA Buttons */}
             <motion.div 
-              className="flex flex-col sm:flex-row gap-4 mt-8"
+              className="flex flex-col sm:flex-row gap-4 mt-4"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.6 }}
@@ -94,7 +94,7 @@ const Hero = () => {
                 <span>Try Demo</span>
                 <Play size={20} />
               </a>
-              <ContractAddress />
+              <ContractAddress className="px-6 py-3 text-base" />
             </motion.div>
 
           </motion.div>
